@@ -1,0 +1,282 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #3628b4, #4F46E5, #1e1ea2);
+    --primary-color: #00ffd5;
+    --text-color: white;
+    --card-bg: #1e293b;
+    --done: #1e293b;
+}
+
+.light-theme {
+            --bg-gradient: linear-gradient(135deg, #e0eafc, #cfdef3);
+            --text-color: #333;
+            --card-bg: #f8f9fa;
+}
+
+/*welcom ka code hai 👇*/
+h1{
+text-align:center;
+color:#ffffff;
+}
+/*welcom ka code hai 👆*/
+
+
+/*search sai hai 👇*/
+#search {
+            width: 90%; max-width: 600px; padding: 12px;
+            font-size: 16px; border-radius: 10px; background: rgba(173,216,230,0.1);
+            margin: 20px auto; display: block; border: none; border: 1px solid rgba(173,216,230,0.2);
+        }
+        .hero { text-align: center; padding: 50px 20px; }
+        .site-title { font-size: 32px; color: var(--primary-color); font-weight: bold; }
+/*search sai hai ☝️*/
+
+
+button{
+display: flex; align-items: center; gap: 8px;
+padding:12px 18px;
+margin:5px;
+border:none;
+border-radius:15px;
+white-space: nowrap;
+font-size: 14px;
+color:white;
+background: rgba(255, 255, 255, 0.08);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+cursor:pointer;
+box-shadow: 0 0 10px cyan, 0 0 20px #00f0ff inset; transition: 0.3s;
+}
+
+ /* --- Main UI Styles --- */
+        #mainContent { display: none; padding: 20px; animation: fadeIn 1s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        #themeBtn {
+            position: fixed; top: 20px; right: 20px;
+            background: rgba(255,255,255,0.2); border: none;
+            padding: 12px; border-radius: 50%; cursor: pointer;
+            font-size: 22px; z-index: 100; backdrop-filter: blur(5px);
+        }
+
+/* --- AI Voice Buttons Styles --- */
+        .buttons {
+            display: flex; overflow-x: auto; gap: 12px;
+            padding: 15px; scroll-behavior: smooth;
+        }
+
+        .ai-btn {
+            display: flex; align-items: center; gap: 8px;
+            padding: 12px 18px; border-radius: 15px;
+            cursor: pointer; white-space: nowrap; font-size: 14px;
+            color: white; background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 0 10px cyan, 0 0 20px #00f0ff inset; transition: 0.3s;
+        }
+        .ai-btn:hover { transform: scale(1.1); }
+        .ai-btn.active {
+            background: rgba(35, 198, 95, 0.3);
+            box-shadow: 0 0 20px #00ff5e, 0 0 40px #00ff5e inset;
+        }
+
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.card{
+background:#1e293b;
+padding:15px;
+border-radius:10px;
+}
+
+.card a{
+color:#22c55e;
+text-decoration:none;
+font-size:18px;
+}
+
+.copy{
+margin-top:8px;
+padding:5px 10px;
+border:none;
+border-radius:6px;
+background:#38bdf8;
+cursor:pointer;
+}
+
+.copy:hover{
+background:#0ea5e9;
+}
+
+body{
+margin:0;
+font-family:Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+margin: 0;
+background: var(--bg-gradient);
+color: var(--text-color);
+transition: 0.5s;
+min-height: 100vh;
+}
+
+#lock{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: linear-gradient(135deg, #020617, #4F46E5);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.box{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:50px;
+text-align: center;
+border: 1px solid rgba(255, 255, 255, 0.1);
+transform: translateY(0);
+transition: 0.5s;
+width:350px;
+box-shadow:0 0 25px rgba(0,0,0,0.5);
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{transform:scale(0.8);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+
+h2{
+color:#38bdf8;
+}
+
+.btn{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin:15px 0;
+padding:12px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+transition:0.3s;
+}
+
+.youtube{background:#ff0000;}
+.instagram{background:#e1306c;}
+
+.btn:hover{transform:scale(1.05);}
+
+.tick{
+font-size:20px;
+margin-left:10px;
+color:#38bdf8;
+display:none;
+}
+
+#enter {
+            border: none; 
+            padding: 15px; 
+            width: 100%;
+            border-radius: 12px; 
+            color: #94a3b8; 
+            font-weight: bold;
+            cursor: not-allowed; 
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        #enter.active {
+            background: linear-gradient(45deg, #38bdf8, #818cf8);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+           animation: pulseGlow 1.5s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1); box-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
+            50% { transform: scale(1.03); box-shadow: 0 0 25px rgba(56, 189, 248, 0.9); }
+            100% { transform: scale(1); box-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
+        }
+
+        #enter.active::after {
+            content: ''; position: absolute; top: -50%; left: -150%;
+            width: 200%; height: 200%; background: rgba(255, 255, 255, 0.2);
+            transform: rotate(45deg); animation: shine 3s infinite;
+        }
+        @keyframes shine {
+            0% { left: -150%; }
+            20% { left: 150%; }
+            100% { left: 150%; }
+        }
+
+
+.header-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+gap:15px;
+padding:15px;
+}
+
+.logo{
+width:60px;
+height:60px;
+}
+
+.site-title{
+font-size:24px;
+font-weight:bold;
+color:var(--primary-color);
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.8;
+}
+
+.btn{
+padding:12px 25px;
+border:2px solid var(--primary-color);
+background:transparent;
+color:white;
+cursor:pointer;
+transition:0.3s;
+margin-top:20px;
+}
+
+.btn:hover{
+background:var(--primary-color);
+color:black;
+}
+
+@media(max-width:768px){
+}
+.hero h1{
+font-size:28px;
+}
+
